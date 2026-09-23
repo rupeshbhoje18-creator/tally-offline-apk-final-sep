@@ -2,7 +2,7 @@ package com.example.tallycustomerapp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope // जरुरी!
+import androidx.lifecycle.viewModelScope // Very important!
 
 import com.example.tallycustomerapp.data.OfflineCompany
 import com.example.tallycustomerapp.data.CompanyDao
