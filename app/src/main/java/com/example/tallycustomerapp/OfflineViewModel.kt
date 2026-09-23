@@ -1,11 +1,12 @@
-package com.example.tallycustomerapp.offline
+package com.example.tallycustomerapp
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.MutableLiveData
-import com.example.tallycustomerapp.data.*
+import androidx.lifecycle.viewModelScope // जरुरी!
+
+import com.example.tallycustomerapp.data.OfflineCompany
+import com.example.tallycustomerapp.data.CompanyDao
 import kotlinx.coroutines.launch
-import androidx.lifecycle.ViewModelProvider
 
 class OfflineViewModel(
     private val dao: CompanyDao
@@ -21,11 +22,5 @@ class OfflineViewModel(
                 companiesLiveData.postValue(emptyList())
             }
         }
-    }
-}
-
-class OfflineViewModelFactory(private val dao: CompanyDao) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return OfflineViewModel(dao) as T
     }
 }
